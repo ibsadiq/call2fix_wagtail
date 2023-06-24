@@ -39,15 +39,24 @@
       <div class="row">
         <div class="col-lg-6 order-2 order-lg-1">
           <p class="h6 mb-1 text-uppercase text-primary mb-3">Our main features</p>
-          <h2 class="mb-4">We Work With You To Address Your Most Critical Business Priorities</h2>
-          <p class="text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h2 class="mb-4">Who Are We?</h2>
+          <p class="text-sm text-muted">We connect you to professional building repair artisans closest to you anytime, anywhere. Like Uber, once you make a request, we will send you professional artisan(s) closest to you from our large pool of well-trained, pre-qualified, and service-oriented artisans. Call2Fix provides you with secure, safe, convenient, and reliable home and office repair services from the comfort of your phone.</p>
           <ul class="list-check list-unstyled row px-3 mb-4 gy-2">
-            <li class="text-sm text-muted col-lg-6">Acquire live chat enables sales</li>
-            <li class="text-sm text-muted col-lg-6">Learn from customer feedback</li>
-            <li class="text-sm text-muted col-lg-6">Engage - marketing automation</li>
-            <li class="text-sm text-muted col-lg-6">Support -customer support</li>
-            <li class="text-sm text-muted col-lg-6">Acquire live chat enables sales</li>
-            <li class="text-sm text-muted col-lg-6">Learn from customer feedback</li>
+            <li class="text-sm text-muted col-lg-6">
+              <div style="float: left; margin-right: 10px;">
+                <img src="{% static 'img/ISO-9001-2015.png' %}" alt="ISO Logo" style="height: 50px; width:50px;">
+              </div>
+              <strong>Backed by Alpha Mead</strong> Nigeria’s first FM Company Certified to ISO 9001:2015 by United Kingdom Accreditation Services (UKAS).
+            </li>
+            
+            <!--<li class="text-sm text-muted col-lg-6"><div style="float: left; margin-right: 10px;">
+              <img src="{% static 'img/ISO-9001-20151.png' %}" alt="ISO Logo">
+            </div><strong>Backed by Alpha Mead</strong> Nigeria’s first FM Company Certified to ISO 9001:2015 by United Kingdom Accreditation Services (UKAS).</li> -->
+            <li class="text-sm text-muted col-lg-6"><strong>Security and safety</strong> All artisans are screened on three levels and will have unique identification numbers that customer can use to verify them.</li>
+            <li class="text-sm text-muted col-lg-6"><strong>User rating system</strong>
+              Assigns jobs based on pre-defined criteria such as customer satisfaction and completed jobs</li>
+            <li class="text-sm text-muted col-lg-6"><strong>24/7 Support</strong>
+              Round the clock experience center available to users in need of guidance or re-work from service provider.</li>
           </ul>
           <ul class="list-inline py-4 border-top border-bottom d-flex align-items-center">
             <li class="list-inline-item pr-4 mr-0"><img src="{% static 'img/about-sign.png' %}" alt="" width="80"></li>
@@ -137,7 +146,7 @@
     </div>
   </section>
   <!-- Divider Section -->
-  <section class="bg-cover bg-center" style="background: url("{% static 'img/hero-banner-2.jpg' %}")">
+  <section class="bg-cover bg-center" style="background: url('{% static "img/hero-banner-2.jpg" %}')">
     <div class="primary-overlay py-5">
       <div class="overlay-content">
         <div class="container">
