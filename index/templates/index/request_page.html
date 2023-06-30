@@ -1,0 +1,126 @@
+{% extends 'layouts/base.html' %}
+
+{% load static wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+
+{% image page.image width-1288 as img%}
+<section class="hero bg-cover bg-position py-4" style="background: url({{img.url}})">
+    <div class="container py-5 index-forward text-white">
+      <h1>Contact Us</h1>
+      <!-- Breadcrumb-->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-none mb-0 p-0">
+          <li class="breadcrumb-item ps-0"><a href="{{page.home_url}}"> <i class="fas fa-home me-2"></i>Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <section class="py-5 shadow-sm z-index-20 position-relative">
+    <div class="container py-5">
+      <header>
+        <h2>Make an<span class="text-primary"> Online</span>Request</h2>
+        <p class="mb-5 text-muted">{{page.intro}}</p>
+      </header>
+      <div class="row gy-5">
+        <div class="col-lg-7">
+          <div class="pt-1 bg-primary">
+            <div class="p-4 p-lg-5 bg-white shadow-sm">
+              <form action="{% pageurl page %}", method="POST">
+                {% csrf_token %}
+                {% if form.errors %}
+            <div class="alert alert-danger">
+              <strong>Form errors:</strong>
+              <ul>
+                {% for field in form %}
+                  {% for error in field.errors %}
+                    <li>{{ field.label }}: {{ error }}</li>
+                  {% endfor %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+                <div class="row gy-3">
+                  <div class="col-lg-6">
+                    {% render_field form.first_name autocomplete="off" class="form-control" placeholder="First name" %}
+                  </div>
+                  <div class="col-lg-6">
+                    {% render_field form.last_name autocomplete="off" class="form-control" placeholder="Last name" %}
+                  </div>
+                  <div class="col-lg-6">
+                    {% render_field form.phone_number autocomplete="off" class="form-control" placeholder="Phone number" %}
+                  </div>
+                  <div class="col-lg-6">
+                    {% render_field form.your_email autocomplete="off" class="form-control" placeholder="Email" %}
+                  </div>
+                  <div class="col-lg-12">
+                    {% render_field form.property_address autocomplete="off" class="form-control" placeholder="Propperty address" %}
+                  </div>
+                  <div class="col-lg-12">
+                      <div class="form-group">
+                        <div class="row">
+                          <label>Select a service category:</label>
+                        </div>
+                        <div class="row">
+                          {% for field in form.service_category %}
+                            <div class="form-check form-check-inline">
+                              {{ field.tag }}
+                              {{ field.choice_label }}
+                            </div>
+                            {% if forloop.counter|divisibleby:2 and not forloop.last %}
+                            </div><div class="row">
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-12">
+                    {% render_field form.message autocomplete="off" class="form-control mt-2" placeholder="Request description" %}
+                  </div>
+                  <div class="col-lg-12">
+                    {% render_field form.wagtailcaptcha class="mb-2"%}
+                  </div>
+                  <div class="col-lg-12">
+                    <button class="btn btn-outline-primary" type="submit">Submit now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h3>Have a quesion?</h3>
+          <p class="text-muted mb-5">If you got any questions please do not hesitate to send us a message.</p>
+          <ul class="list-unstyled">
+            <li class="d-flex mb-3">
+              <div class="icon bg-primary flex-shrink-0"><i class="fas text-white fa-fw fa-map-marker-alt"></i></div>
+              <div class="ms-3">
+                <h5 class="mb-0">Address</h5>
+                <p class="text-muted text-sm">{{page.address}}</p>
+              </div>
+            </li>
+            <li class="d-flex mb-3">
+              <div class="icon bg-primary flex-shrink-0"><i class="fas text-white fa-fw fa-envelope"></i></div>
+              <div class="ms-3">
+                <h5 class="mb-0">Email</h5>
+                <p class="text-muted text-sm">{{page.email}}</p>
+              </div>
+            </li>
+            <li class="d-flex mb-3">
+              <div class="icon bg-primary flex-shrink-0"><i class="fas text-white fa-fw fa-mobile"></i></div>
+              <div class="ms-3">
+                <h5 class="mb-0">Phone</h5>
+                <p class="text-muted text-sm">{{page.contact}}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

@@ -68,6 +68,11 @@
   }
 }
 
+.google-badge {
+  width: 122px;
+  height: 44px;
+
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

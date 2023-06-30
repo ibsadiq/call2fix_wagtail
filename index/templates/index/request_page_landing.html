@@ -1,0 +1,9 @@
+{% extends 'layouts/base.html' %}
+
+{% load static wagtailcore_tags %}
+
+{% block content%}
+<div class="p-4 mb-4 text-green-700 bg-green-100 rounded-lg" role="alert">
+    <p>{{ page.thank_you_text|richtext }}</p>
+</div>
+{% endblock %}

@@ -19,7 +19,6 @@
                     <p class="lead">{{ loop_cycle.description }}</p>
                     <ul class="list-inline">
                     <li class="list-inline-item me-0"><a class="btn btn-primary" href="#!">Read More</a></li>
-                    <li class="list-inline-item"></li><a class="btn btn-outline-light" href="#!">Our company</a>
                     </ul>
                 </div>
                 </div>
@@ -59,19 +58,22 @@
               Round the clock experience center available to users in need of guidance or re-work from service provider.</li>
           </ul>
           <ul class="list-inline py-4 border-top border-bottom d-flex align-items-center">
-            <li class="list-inline-item pr-4 mr-0"><img src="{% static 'img/about-sign.png' %}" alt="" width="80"></li>
-            <li class="list-inline-item px-4 mr-0 border-left">
-              <h5 class="mb-0">Jack Foxx</h5>
-              <p class="small font-weight-normal text-muted mb-0">Chairnan and founder </p>
+            {% comment %} <li class="list-inline-item pr-4 mr-0"><img src="{% static 'img/about-sign.png' %}" alt="" width="80"></li> {% endcomment %}
+            <li class="list-inline-item pr-4 mr-0">
+              <h5 class="mb-0">Download our App</h5>
+            </li>
+            <li class="list-inline-item px-4 border-left">
+              <a href="https://apps.apple.com/ng/app/call2fix/id1483186601"><img class="mb-0" alt='Get it on Apple Store' src="{% static 'img/App_Store_Badge.svg' %}"></a>
+              {% comment %} <p class="small font-weight-normal text-muted mb-0">Call to ask any question</p> {% endcomment %}
             </li>
             <li class="list-inline-item pl-4 border-left">
-              <h5 class="mb-0">+420 754 6545 6564</h5>
-              <p class="small font-weight-normal text-muted mb-0">Call to ask any question</p>
+              <a href="https://play.google.com/store/apps/details?id=com.tulabyte.call2fix&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Get it on Google Play' src="{% static 'img/google-play-badge1.png'%}" class="google-badge" /></a>
             </li>
           </ul>
         </div>
         <div class="col-lg-5 ms-auto mb-4 mb-lg-0 order-1 order-lg-2">
-          <div class="p-2 border"><img class="img-fluid" src="{% static 'img/about-img.jpg' %}" alt=""></div>
+          <div class="p-2 border">
+            <img class="img-fluid" style="height:470.76px;"src="{% static 'img/about_image.jpg' %}" alt=""></div>
         </div>
       </div>
     </div>
@@ -83,79 +85,109 @@
         <div class="row">
           <div class="col-lg-7 mx-auto">
             <p class="h6 text-uppercase text-primary mb-0">Our services</p>
-            <h2>We Creating Solutions For Your Organization</h2>
+            <h2>what can you do with Call2fix?</h2>
           </div>
         </div>
       </header>
       <div class="row align-items-stretch gy-4">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="px-4 py-5 border border-2 border-dash h-100">
-            <svg class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
-              <use xlink:href="#laptop-screen-1"> </use>
-            </svg>
-            <h3 class="h5">Business Finance Strategy</h3>
-            <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="{% static 'img/broken-cable.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Electrical Repair & Maintenance</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="px-4 py-5 border border-2 border-dash h-100">
-            <svg class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
-              <use xlink:href="#quality-1"> </use>
-            </svg>
-            <h3 class="h5">Portfolio &amp; Resource Allocation</h3>
-            <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="{% static 'img/civil-work.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Building & Civil Works</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="px-4 py-5 border border-2 border-dash h-100">
-            <svg class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
-              <use xlink:href="#survey-1"> </use>
-            </svg>
-            <h3 class="h5">Organization &amp; Decision Process</h3>
-            <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="{% static 'img/pipe.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Plumbing</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="px-4 py-5 border border-2 border-dash h-100">
-            <svg class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
-              <use xlink:href="#pie-chart-1"> </use>
-            </svg>
-            <h3 class="h5">Decision &amp; Risk Analytic</h3>
-            <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="{% static 'img/minisplit.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">HVAC/Air Conditioning</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="px-4 py-5 border border-2 border-dash h-100">
-            <svg class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
-              <use xlink:href="#pay-1"> </use>
-            </svg>
-            <h3 class="h5">Banking &amp; Capital Markets</h3>
-            <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="{% static 'img/plant-a-tree.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Enviromental Services</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="px-4 py-5 border border-2 border-dash h-100">
-            <svg class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
-              <use xlink:href="#stack-1"> </use>
-            </svg>
-            <h3 class="h5">Modern &amp; Tribe Workplace</h3>
-            <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <img src="{% static 'img/frontal-truck.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Equipment Leasing</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="px-4 py-5 border border-2 border-dash h-100">
+            <img src="{% static 'img/cleaning-spray-bottle-2.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Cleaning Services</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="px-4 py-5 border border-2 border-dash h-100">
+            <img src="{% static 'img/fire-alarm.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Fire Systems & Security</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="px-4 py-5 border border-2 border-dash h-100">
+            <img src="{% static 'img/generator.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Generator Maintenance</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="px-4 py-5 border border-2 border-dash h-100">
+            <img src="{% static 'img/smart-washing-machine.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Domestic Appliances Repair & Maintenance</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="px-4 py-5 border border-2 border-dash h-100">
+            <img src="{% static 'img/printer.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Office Equipment Repair & Maintenance</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="px-4 py-5 border border-2 border-dash h-100">
+            <img src="{% static 'img/office-chair.png' %}" class="svg-icon mb-4 text-primary svg-icon-light svg-icon-big">
+            <h3 class="h5">Furniture & Carpentry Services</h3>
+            {% comment %} <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> {% endcomment %}
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Divider Section -->
-  <section class="bg-cover bg-center" style="background: url('{% static "img/hero-banner-2.jpg" %}')">
+  <section class="bg-cover bg-center" style="background: url('{% static "img/call2fix-earn-banner.jpg" %}')">
     <div class="primary-overlay py-5">
       <div class="overlay-content">
         <div class="container">
           <div class="row align-items-center gy-4">
             <div class="col-lg-7 text-center text-lg-start">
-              <h2 class="text-white mb-2">You Always Get the Best Guidance</h2>
-              <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h2 class="text-white mb-2">Register as Service Provider & Start Earning</h2>
+              <p class="text-white mb-0">Increase transactions, acquire new customers - no marketing budget needed.</p>
             </div>
-            <div class="col-lg-3 ms-auto text-center text-lg-end"><a class="btn btn-outline-light" href="#!">Request a quote</a></div>
+            <div class="col-lg-3 ms-auto text-center text-lg-end"><a class="btn btn-outline-light" href="#">Start Earning</a></div>
           </div>
         </div>
       </div>
@@ -166,30 +198,30 @@
     <div class="container py-5">
       <div class="row align-items-center gx-lg-0">
         <div class="col-lg-5">
-          <div class="bg-primary pe-lg-3"><img class="img-fluid w-100" src="{% static 'img/feature-img.jpg' %}" alt=""></div>
+          <div class="bg-primary pe-lg-3"><img class="img-fluid w-100" style="height: 538.92px;" src="{% static 'img/guy12b.png' %}" alt=""></div>
         </div>
         <div class="col-lg-7">
           <div class="p-4 p-md-5 shadow bg-white">
             <p class="h6 mb-1 text-uppercase text-primary mb-3">Why choose us</p>
-            <h2 class="mb-5">We Provide Experts To Create A Great Value For Your Business</h2>
+            <h2 class="mb-5">Call2Fix Solutions</h2>
             <div class="row">
               <div class="col-lg-9">
                 <ol class="list-numbers mb-0">
                   <li class="mb-4">
-                    <h5>We modify whole system</h5>
-                    <p class="text-sm text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. </p>
+                    <h5>Tracking System </h5>
+                    <p class="text-sm text-muted">The app allows you to track all your requests from the comfort of your phone.</p>
                   </li>
                   <li class="mb-4">
-                    <h5>Safeguard for Your Business</h5>
-                    <p class="text-sm text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. </p>
+                    <h5>Marketplace</h5>
+                    <p class="text-sm text-muted">You get to buy building materials or rent equipment directly from the vendors on the app.</p>
                   </li>
                   <li class="mb-4">
-                    <h5>Beneficial Strategies</h5>
-                    <p class="text-sm text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. </p>
+                    <h5>Video Briefing Feature</h5>
+                    <p class="text-sm text-muted">You can share videos with Artisans to get an accurate scope of repair work to be done in your building. </p>
                   </li>
                   <li>
-                    <h5>Build Solid Human Resource</h5>
-                    <p class="text-sm text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. </p>
+                    <h5>Bidding Process</h5>
+                    <p class="text-sm text-muted">You get up to five price quotations from different vendors for you to choose from. </p>
                   </li>
                 </ol>
               </div>
@@ -214,101 +246,6 @@
             </div>
           </header>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- Testimonials Section-->
-  <section class="py-5">
-    <div class="container py-5">
-      <p class="h6 mb-1 text-uppercase text-primary mb-3">Our clients say</p>
-      <div class="row mb-5">
-        <div class="col-lg-5">
-          <h2 class="mb-5">The Best Solutions For Developing Your Business</h2>
-        </div>
-        <div class="col-lg-7">
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-      <div class="swiper testimonials-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide p-3">
-            <div class="testimonial p-5 shadow-sm mb-5">
-              <div class="d-flex align-items-center mb-4">
-                <div class="testimonial-img flex-shrink-0"><img class="img-fluid rounded-circle" src="{% static 'img/person-1.jpg' %}" alt=""></div>
-                <div class="ms-4">
-                  <h5 class="mb-0">Rodel Colez</h5>
-                  <p class="small text-muted mb-1">Businessman</p>
-                  <ul class="small list-inline text-primary mb-0">
-                    <li class="list-inline-item m-0"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 1"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 2"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 3"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 4"><i class="fas fa-star"></i></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="text-muted text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   </p>
-            </div>
-          </div>
-          <div class="swiper-slide p-3">
-            <div class="testimonial p-5 shadow-sm mb-5">
-              <div class="d-flex align-items-center mb-4">
-                <div class="testimonial-img flex-shrink-0"><img class="img-fluid rounded-circle" src="{% static 'img/person-2.jpg' %}" alt=""></div>
-                <div class="ms-4">
-                  <h5 class="mb-0">Mark Huff</h5>
-                  <p class="small text-muted mb-1">Businessman</p>
-                  <ul class="small list-inline text-primary mb-0">
-                    <li class="list-inline-item m-0"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 1"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 2"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 3"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 4"><i class="fas fa-star"></i></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="text-muted text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   </p>
-            </div>
-          </div>
-          <div class="swiper-slide p-3">
-            <div class="testimonial p-5 shadow-sm mb-5">
-              <div class="d-flex align-items-center mb-4">
-                <div class="testimonial-img flex-shrink-0"><img class="img-fluid rounded-circle" src="{% static 'img/person-1.jpg' %}" alt=""></div>
-                <div class="ms-4">
-                  <h5 class="mb-0">Rodel Colez</h5>
-                  <p class="small text-muted mb-1">Businessman</p>
-                  <ul class="small list-inline text-primary mb-0">
-                    <li class="list-inline-item m-0"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 1"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 2"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 3"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 4"><i class="fas fa-star"></i></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="text-muted text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   </p>
-            </div>
-          </div>
-          <div class="swiper-slide p-3">
-            <div class="testimonial p-5 shadow-sm mb-5">
-              <div class="d-flex align-items-center mb-4">
-                <div class="testimonial-img flex-shrink-0"><img class="img-fluid rounded-circle" src="{% static 'img/person-1.jpg' %}" alt=""></div>
-                <div class="ms-4">
-                  <h5 class="mb-0">Rodel Colez</h5>
-                  <p class="small text-muted mb-1">Businessman</p>
-                  <ul class="small list-inline text-primary mb-0">
-                    <li class="list-inline-item m-0"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 1"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 2"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 3"><i class="fas fa-star"></i></li>
-                    <li class="list-inline-item m-0 4"><i class="fas fa-star"></i></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="text-muted text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination">                               </div>
       </div>
     </div>
   </section>

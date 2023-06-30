@@ -3,10 +3,15 @@ from django.core.exceptions import ValidationError
 
 
 from wagtail.models import Page, Orderable
-from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
+from wagtail.admin.panels import (
+    FieldPanel, InlinePanel, 
+    MultiFieldPanel, FieldRowPanel)
 from modelcluster.models import ParentalKey
 from wagtail.snippets.models import register_snippet
 from phonenumber_field.modelfields import PhoneNumberField
+from wagtail.fields import RichTextField
+from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
+from wagtailcaptcha.models import WagtailCaptchaEmailForm
 
 
 
@@ -98,11 +103,13 @@ class Footer(models.Model):
     contact = PhoneNumberField(null=True)
     email = models.EmailField(null=True)
     address = models.CharField(max_length=500, null=True)
+    footer_text = models.TextField(null=True)
 
     panels =[
         MultiFieldPanel([
-            FieldPanel('home_url'),
             FieldPanel('footer_logo'),
+            FieldPanel('home_url'),
+            FieldPanel('footer_text'),
             FieldPanel('contact'),
             FieldPanel('email'),
             FieldPanel('address'),
@@ -125,5 +132,47 @@ class Footer(models.Model):
     
     class Meta:
         verbose_name_plural = "Footer"
+
+
     
+
+class FormField(AbstractFormField):
+    page = ParentalKey('RequestPage', on_delete=models.CASCADE, related_name='form_fields')
+
+
+
+class RequestPage(WagtailCaptchaEmailForm):
+    intro = models.CharField(max_length=300, blank=True)
+    # subject = models.CharField(max_length=300)
+    thank_you_text = RichTextField(blank=True)
+    image =  models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.PROTECT, related_name='+', null=True, 
+     )
+    
+    home_url = models.URLField(null=True)
+    contact = PhoneNumberField(null=True)
+    email = models.EmailField(null=True)
+    address = models.CharField(max_length=500, null=True)
+    
+    content_panels = AbstractEmailForm.content_panels + [
+        FieldPanel('intro'),
+        InlinePanel('form_fields', label="Form fields"),
+        FieldPanel('thank_you_text'),
+        MultiFieldPanel([
+            FieldRowPanel([
+                FieldPanel('from_address', classname="col6"),
+                FieldPanel('to_address', classname="col6"),
+            ]),
+        # FieldPanel('subject'),
+        ], heading ='Email settings'),
+
+        MultiFieldPanel([
+            FieldPanel('image'),
+            FieldPanel('home_url'),
+            FieldPanel('contact'),
+            FieldPanel('email'),
+            FieldPanel('address'),
+        ]),
+    ]
+
 

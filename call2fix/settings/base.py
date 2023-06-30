@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "phonenumber_field",
+    "wagtailcaptcha",
+    "widget_tweaks",
+    "captcha",
 ]
 
 MIDDLEWARE = [
@@ -166,3 +169,9 @@ WAGTAILSEARCH_BACKENDS = {
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 WAGTAILADMIN_BASE_URL = "http://example.com"
+
+
+RECAPTCHA_PUBLIC_KEY= "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+RECAPTCHA_PRIVATE_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+NOCAPTCHA = True
+SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
