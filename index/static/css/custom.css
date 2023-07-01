@@ -73,6 +73,14 @@
   height: 44px;
 
 }
+.phone {
+  width: 200px;
+  height: 300px;
+}
+.earn-image {
+  width: 42px;
+  height:40px;
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

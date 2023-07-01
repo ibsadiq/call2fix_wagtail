@@ -1,0 +1,240 @@
+{% extends 'layouts/base.html'%}
+{% load static %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container py-5">
+      <div class="row gy-4">
+        <div class="col-lg-5">
+          <div class="pt-1 "><img class="img-fluid" style="width:480px; height:600px;"src="{% static 'img/CALL2FIX-MAN.png' %}" alt=""></div>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-4">How it Works</h2>
+          <p class="text-sm text-muted">We are creating an eco-system of building maintenance service providers where customers can connect through Call2Fix mobile application to request for service in pre-defined categories of building maintenance.</p>
+          <p class="text-sm text-muted">Service providers on Call2Fix will register their businesses and after confirmation, also register their screened artisans in the service category they have been pre-qualified for. Requests from customers from the platform will automatically be allocated to appropriate artisan (who have been registered by a service provider), based on proximity to the customer and the automated rating systems.</p>
+          <p class="text-sm text-muted">Customers will receive a system-generated personal details of the assigned artisan, which they will use to verify his/her identity on arrival at the job site. On completion of the job, service provider and artisan get paid, in line with Call2Fix payment process. </p>
+          <h2 class="mt-4">Why Call2Fix</h2>
+          <div class="container py-5 text-center">
+            <div class="row text-center">
+                <div class="col">
+                    <div class="d-inline-block">
+                        <img class="earn-image" src="{% static 'img/wallet.png' %}" alt="">
+                        <h6>Earn More</h6>
+                        <p class="text-sm text-muted">Increase your transactions, access new customers – with no marketing budget.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-inline-block">
+                        <img class="earn-image" src="{% static 'img/digitalization.png' %}" alt="">
+                        <h6>Go Digital</h6>
+                        <p class="text-sm text-muted">Stop paying shop rent, remove all restrictions with Call2Fix.</p>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="row text-center">
+                <div class="col">
+                    <div class="d-inline-block">
+                        <img class="earn-image" src="{% static 'img/efficacy.png' %}" alt="">
+                        <h6>Run More Efficiently</h6>
+                        <p class="text-sm text-muted">Create wealth for your employees, reduce idle time.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-inline-block">
+                        <img class="earn-image" src="{% static 'img/globe.png' %}" alt="">
+                        <h6>Become Global</h6>
+                        <p class="text-sm text-muted">Partner with Alpha Mead, operate with global standard.</p>
+                    </div>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-2 bg-light ">
+    <div class="container py-0">
+        <div class="text-center">
+            <img class="phone" src="{% static 'img/Call2fix-mockup-400x600.jpg' %}">
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-10 mx-auto">
+            <h2>Get started by downloading the Call2Fix App</h2>
+          </div>
+        </div>
+        <div class="row text-center">
+            <ul class="d-inline">
+                <li class="d-inline"><a href="https://apps.apple.com/ng/app/call2fix/id1483186601"><img class="mb-0" alt='Get it on Apple Store' src="{% static 'img/App_Store_Badge.svg' %}"></a></li>
+                <li class="d-inline"><a href="https://play.google.com/store/apps/details?id=com.tulabyte.call2fix&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Get it on Google Play' src="{% static 'img/google-play-badge1.png'%}" class="google-badge" /></a></li>
+            </ul>
+        </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container py-5">
+      <h2>Frequently asked questions</h2>
+      {% comment %} <p class="text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p> {% endcomment %}
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item border-0 mb-1">
+              <div class="accordion-header p-0 border-0 bg-white" id="headingOne">
+                <h6 class="mb-0">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Who is a Service Provider on Call2Fix?
+                  </button>
+                </h6>
+              </div>
+              <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" id="collapseOne">
+                <div class="p-4">
+                  <p class="text-sm text-muted mb-0">A Service Provider is an individual or company who has the human, equipment and financial capacity and capability to provider service in any of the service categories on Call2Fix.                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-1">
+              <div class="accordion-header p-0 border-0 bg-white" id="headingTwo">
+                <h6 class="mb-0">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Can I be a Service Provider without a Registered Company?                  
+                  </button>
+                </h6>
+              </div>
+              <div class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample" id="collapseTwo">
+                <div class="p-4">
+                  <p class="text-sm text-muted mb-0">Yes. So long as you meet all pre-qualification criteria. However, Call2Fix will encourage you to register your company within your first six months on the platform.                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-1">
+              <div class="accordion-header p-0 border-0 bg-white" id="headingThree">
+                <h6 class="mb-0">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">What are Service Categories on Call2Fix?</button>
+                </h6>
+              </div>
+              <div class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" id="collapseThree">
+                <div class="p-4">
+                  <p class="text-sm text-muted mb-0">The Service Category include: Electrical &amp; Electronics, Plumbing, Carpentry, Electronic Security &amp; Fire Alarms Systems, Generator Maintenance, HVAC/Air Conditioning, Building &amp; Civil works, etc. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-1">
+                <div class="accordion-header p-0 border-0 bg-white" id="heading4">
+                  <h6 class="mb-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Can I register to provide service in more than one service category?</button>
+                  </h6>
+                </div>
+                <div class="collapse" aria-labelledby="heading4" data-parent="#accordionExample" id="collapse4">
+                  <div class="p-4">
+                    <p class="text-sm text-muted mb-0">Yes. However, you must have been pre-qualified for the category. In case, you have not been pre-qualified, you will inform our team who will pre-qualify and add you to more categories on successful completion of your pre-qualification.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-1">
+                <div class="accordion-header p-0 border-0 bg-white" id="heading5">
+              <h6 class="mb-0">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Do I need to pay any registration fee?
+                  
+                </button>
+              </h6>
+            </div>
+            <div class="collapse" aria-labelledby="heading5" data-parent="#accordionExample" id="collapse5">
+              <div class="p-4">
+                <p class="text-sm text-muted mb-0">No. Registration on Call2Fix is free. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item border-0 mb-1">
+            <div class="accordion-header p-0 border-0 bg-white" id="heading6">
+                <h6 class="mb-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">What’s the minimum number of artisans to begin?</button>
+                </h6>
+            </div>
+            <div class="collapse" aria-labelledby="heading6" data-parent="#accordionExample" id="collapse6">
+                <div class="p-4">
+                    <p class="text-sm text-muted mb-0">Minimum number of artisans you can register is three. At no time can a service provider have less than three artisans on their account.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item border-0 mb-1">
+            <div class="accordion-header p-0 border-0 bg-white" id="heading7">
+                <h6 class="mb-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">Can an artisan on my network register independently as an artisan?
+
+                    </button>
+                </h6>
+            </div>
+            <div class="collapse" aria-labelledby="heading7" data-parent="#accordionExample" id="collapse7">
+                <div class="p-4">
+                    <p class="text-sm text-muted mb-0">No. An artisan on a Service Provider’s network but wishes to be registered on Call2Fix independently will first relinquish his or her position with the service provider.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item border-0 mb-1">
+            <div class="accordion-header p-0 border-0 bg-white" id="heading8">
+                <h6 class="mb-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">How do you guarantee security and impersonation?
+
+                    </button>
+                </h6>
+            </div>
+            <div class="collapse" aria-labelledby="heading8" data-parent="#accordionExample" id="collapse8">
+                <div class="p-4">
+                    <p class="text-sm text-muted mb-0">On registration of artisan, the system generates a unique code that links individual artisan to their Service provider. This code, in addition to the artisan’s image is what the customer receives when they are assigned an artisan. The customer has a duty to check this code to ensure it matches with the artisan’s when the artisan arrives at the job site.  
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item border-0 mb-1">
+            <div class="accordion-header p-0 border-0 bg-white" id="heading9">
+                <h6 class="mb-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">Can cash payment be made to the artisan or service provider?
+                    </button>
+                </h6>
+            </div>
+            <div class="collapse" aria-labelledby="heading9" data-parent="#accordionExample" id="collapse9">
+                <div class="p-4">
+                    <p class="text-sm text-muted mb-0">No. All Call2Fix transactions are done on the application wallet. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item border-0 mb-1">
+            <div class="accordion-header p-0 border-0 bg-white" id="heading10">
+                <h6 class="mb-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">How does the transaction work?
+                    </button>
+                </h6>
+            </div>
+            <div class="collapse" aria-labelledby="heading10" data-parent="#accordionExample" id="collapse10">
+                <div class="p-4">
+                    <p class="text-sm text-muted mb-0">On arrival at the job site, the customer is charged a pre-set fee. The artisan then goes on to assess the issue. If it doesn’t require materials, the artisan fixes the issue and the customer is charged a fee. If it requires materials, the artisan quote for the job via the app. The quote goes to the Service Manager at Call2Fix and the customer. Once the customer accepts the quote, the sum is deducted from his/her account. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item border-0 mb-1">
+            <div class="accordion-header p-0 border-0 bg-white" id="heading11">
+                <h6 class="mb-0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">How do you guarantee customers?
+
+
+                    </button>
+                </h6>
+            </div>
+            <div class="collapse" aria-labelledby="heading11" data-parent="#accordionExample" id="collapse11">
+                <div class="p-4">
+                    <p class="text-sm text-muted mb-0">There is a clear gap in the market for this service. Call2Fix is therefore committing huge resources to ensure that awareness is created for this product to fill the gap. This marketing communication, being carried out by one of Nigeria’s leading Marketing Communications companies, is aimed at bringing more customers for our service providers. We take care of the marketing spend, you get the job. It’s that straightforward. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+{% endblock %}

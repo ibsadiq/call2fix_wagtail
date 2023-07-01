@@ -56,6 +56,8 @@ class Header(models.Model):
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+', null=True
     )
     home_url = models.URLField(null=True)
+    service_url = models.URLField(null=True)
+    earn_url = models.URLField(null=True)
 
 
     panels =[
@@ -70,6 +72,8 @@ class Header(models.Model):
         ),
         MultiFieldPanel([
             FieldPanel('home_url'),
+            FieldPanel('service_url'),
+            FieldPanel('earn_url'),
             FieldPanel('logo'),
         ],
         heading ="Nav Bar"
@@ -100,6 +104,8 @@ class Footer(models.Model):
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
     home_url = models.URLField(null=True)
+    earn_url = models.URLField(null=True)
+    service_url = models.URLField(null=True)
     contact = PhoneNumberField(null=True)
     email = models.EmailField(null=True)
     address = models.CharField(max_length=500, null=True)
@@ -109,6 +115,8 @@ class Footer(models.Model):
         MultiFieldPanel([
             FieldPanel('footer_logo'),
             FieldPanel('home_url'),
+            FieldPanel('earn_url'),
+            FieldPanel('service_url'),
             FieldPanel('footer_text'),
             FieldPanel('contact'),
             FieldPanel('email'),
@@ -176,3 +184,5 @@ class RequestPage(WagtailCaptchaEmailForm):
     ]
 
 
+class EarnPage(Page):
+    pass

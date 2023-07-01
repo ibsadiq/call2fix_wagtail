@@ -33,19 +33,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item mx-2">
-              <!-- Link--><a class="nav-link text-uppercase active" href="{{ header.home_url}}">Home</a>
+              <!-- Link--><a class="nav-link text-uppercase{% if request.path == header.home_url %} active{% endif %}" href="{{ header.home_url }}">Home</a>
             </li>
             <li class="nav-item mx-2">
-              <!-- Link--><a class="nav-link text-uppercase" href="about.html">Earn</a>
+              <!-- Link--><a class="nav-link text-uppercase{% if request.path == header.earn_url %} active{% endif %}" href="{{ header.earn_url }}">Earn</a>
             </li>
             <li class="nav-item mx-2">
-              <!-- Link--><a class="nav-link text-uppercase active" href="{{ header.home_url}}">request a service</a>
+              <!-- Link--><a class="nav-link text-uppercase{% if request.path == header.service_url %} active{% endif %}" href="{{ header.service_url }}">Request a service</a>
             </li>
             <li class="nav-item mx-2">
-              <!-- Link--><a class="nav-link text-uppercase" href="contact.html">Alpha Mead</a>
+              <!-- Link--><a class="nav-link text-uppercase{% if 'alphamead.com' == request.get_host %} active{% endif %}" href="https://alphamead.com">Alpha Mead</a>
             </li>
-      
-            <!-- <li class="nav-item ms-lg-3 ps-lg-3"><a class="btn btn-outline-primary btn-sm" href="contact.html">Request a quote</a></li> -->
           </ul>
         </div>
       </div>
