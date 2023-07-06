@@ -37,10 +37,10 @@ WORKDIR /app
 # Set this directory to be owned by the "wagtail" user. This Wagtail project
 # uses SQLite, the folder needs to be owned by the user that
 # will be writing to the database file.
-RUN chown call2fix:call2fix /app
+RUN chown wagtail:wagtail /app
 
 # Copy the source code of the project into the container.
-COPY --chown=call2fix:call2fix . .
+COPY --chown=wagtail:wagtail . .
 
 # Use user "wagtail" to run the build commands below and the server itself.
 USER wagtail
