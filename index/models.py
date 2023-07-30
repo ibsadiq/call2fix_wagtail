@@ -151,7 +151,7 @@ class FormField(AbstractFormField):
 
 class RequestPage(WagtailCaptchaEmailForm):
     intro = models.CharField(max_length=300, blank=True)
-    # subject = models.CharField(max_length=300)
+    subject = models.CharField(max_length=300)
     thank_you_text = RichTextField(blank=True)
     image =  models.ForeignKey(
         'wagtailimages.Image', on_delete=models.PROTECT, related_name='+', null=True, 
@@ -171,7 +171,7 @@ class RequestPage(WagtailCaptchaEmailForm):
                 FieldPanel('from_address', classname="col6"),
                 FieldPanel('to_address', classname="col6"),
             ]),
-        # FieldPanel('subject'),
+        FieldPanel('subject'),
         ], heading ='Email settings'),
 
         MultiFieldPanel([
