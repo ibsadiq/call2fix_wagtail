@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import environ 
+
+env = environ.Env()
+environ.Env.read_env()
+
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -153,6 +158,26 @@ STATIC_URL = "static/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
+EMAIL_BACKEND = "django_o365mail.EmailBackend"
+EMAIL_HOST = "smtp.office365.com"  #'smtp.gmail.com'
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+
+
+O365_MAIL_CLIENT_ID = env("CLIENT_ID")
+O365_MAIL_CLIENT_SECRET = env("CLIENT_SECRET")
+O365_MAIL_TENANT_ID = env("TENANT_ID")
+
+O365_ACTUALLY_SEND_IN_DEBUG = True
+O365_MAIL_SAVE_TO_SENT = True
+
+O365_MAIL_ACCOUNT_KWARGS = {"token_backend": "O365.utils.token.EnvTokenBackend"}
+O365_MAIL_MAILBOX_KWARGS = {"resource": "strategyandplanning@alphamead.com"}
+
 
 # Wagtail settings
 
@@ -168,10 +193,10 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-WAGTAILADMIN_BASE_URL = "http://example.com"
+WAGTAILADMIN_BASE_URL = "http://call2fix.com.ng"
 
 
-RECAPTCHA_PUBLIC_KEY= "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-RECAPTCHA_PRIVATE_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+RECAPTCHA_PUBLIC_KEY= env("PUBLIC_KEY")
+RECAPTCHA_PRIVATE_KEY = env("PRIVATE_KEY")
 NOCAPTCHA = True
 SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
